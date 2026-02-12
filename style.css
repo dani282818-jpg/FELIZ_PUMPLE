@@ -1,0 +1,151 @@
+body{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #073b4c;
+}
+
+.cartitaSam{
+  position: relative;
+  width:250px;
+  height: 350px;
+  cursor: pointer;
+  transform-style: perspective(2500px);
+  transition: 1s;
+}
+
+.cartitaSam: hover {
+  transform: perspective(2500px) rotate (5deg);
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2), 0 10px 100px rgba(0,0,0,0.4);
+}
+
+.cartitaSam:hover .frenteCartita{
+  transform: rotateY(-160deg);
+}
+
+.cartitaSam:hover .feliz{
+  visibility:hidden;
+}
+
+.frenteCartita{
+  position: relative;
+  background-color: #fff;
+  width:250px;
+  height:350px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2), 30px 0 50px rgba(0,0,0,0.4);
+  transition: 0.6s;
+}
+
+.feliz{
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  margin: 30px;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  transition: 0.1s;
+}
+
+.globos{
+  position: absolute;
+}
+
+.primerGlobo, .segundoGlobo, .tercerGlobo, .cuartoGlobo{
+  position: absolute;
+  width: 85px;
+  height: 95px;
+  border-radius: 50%;
+}
+
+.primerGlobo{
+  background-color: rgba(239,71,111,0.7);
+  left: -10px;
+  top: 50px;
+}
+
+.segundoGlobo{
+  background-color: rgba(6,214,160,0.7);
+  left: 50px;
+  top: 20px;
+}
+
+.tercerGlobo{
+  background-color: rgba(255,209,102,0.7);
+  left: 110px;
+  top: 50px;
+}
+
+.cuartoGlobo{
+  background-color: rgba(17,138,178,0.7);
+  left: 170px;
+  top: 20px;
+}
+
+.primerGlobo:before, .segundoGlobo:before, .tercerGlobo:before, .cuartoGlobo:before{
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 155px;
+  background-color: #ffd166;
+  top: 95px;
+  left: 43px;
+}
+
+.primerGlobo:after, .segundoGlobo:after, .tercerGlobo:after, .cuartoGlobo:after{
+  content: "";
+  position: absolute;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  top: 94px;
+  left: 37px;
+}
+
+.primerGlobo:after{
+  border-bottom: 10px solid #ef476f;
+}
+
+.segundoGlobo:after{
+  border-bottom: 10px solid #06d6a0;
+}
+
+.tercerGlobo:after{
+  border-bottom: 10px solid #ffd166;
+}
+
+.cuartoGlobo:after{
+  border-bottom: 10px solid #118ab2;
+}
+
+.cartitaDentro{
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 350px;
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,0.2);
+  z-index:-1;
+}
+
+p{
+  font-family: "Brush Script MT", cursive;
+  margin: 30px;
+  color: #333;
+}
+
+.nombre{
+  position: absolute;
+  left: 150px;
+  top: 300px;
+  color: #333;
+}
+
+.dentro{
+  family-font: Thaoma, sans-serif;
+  color: #333;
+  text-align: center;
+  margin: 20px;
+  outline-color: #333;
+  outline-style: dotted;
+}
